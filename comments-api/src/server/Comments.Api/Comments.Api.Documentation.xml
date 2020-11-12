@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Comments.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Sts.Business.Identity.JwtFactory.ToUnixEpochDate(System.DateTime)">
+            <summary>
+            Converts a date to Unix epoch.
+            </summary>
+            <param name="date">The date to convert</param>
+            <returns>Date converted to seconds since Unix epoch (Jan 1, 1970, midnight UTC).</returns>
+        </member>
+    </members>
+</doc>

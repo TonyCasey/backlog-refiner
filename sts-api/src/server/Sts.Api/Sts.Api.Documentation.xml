@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Sts.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Sts.Api.Controllers.UsersController.Login(Sts.Core.Models.LoginUserModel)">
+            <summary>
+            Login.
+            </summary>
+            <param name="model">The credentials.</param>
+            <returns>A JWT token.</returns>
+            <response code="200">If the credentials have a match.</response>
+            <response code="400">If the credentials don't match/don't meet the requirements.</response>
+        </member>
+        <member name="M:Sts.Api.Controllers.UsersController.Register(Sts.Core.Models.RegisterUserModel)">
+            <summary>
+            Register.
+            </summary>
+            <param name="model">The user model.</param>
+            <returns>A user model.</returns>
+            <response code="201">A user was created.</response>
+            <response code="400">Invalid input.</response>
+        </member>
+    </members>
+</doc>

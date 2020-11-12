@@ -1,0 +1,155 @@
+2018-11-01T09:29:26.3220220+00:00 0HLHVRI22TTCQ:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5001/  0 (ca22a1cb)
+2018-11-01T09:29:26.3220220+00:00 0HLHVRI22TTCR:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html   (ca22a1cb)
+2018-11-01T09:29:26.3413536+00:00 0HLHVRI22TTCR:00000001 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2018-11-01T09:29:26.3561187+00:00 0HLHVRI22TTCQ:00000001 [INF] Request finished in 26.7715ms 200  (791a596a)
+2018-11-01T09:29:26.3852875+00:00 0HLHVRI22TTCR:00000001 [INF] Request finished in 61.8922ms 200 text/html (791a596a)
+2018-11-01T09:29:26.6496980+00:00 0HLHVRI22TTCQ:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json   (ca22a1cb)
+2018-11-01T09:29:26.8920780+00:00 0HLHVRI22TTCQ:00000002 [INF] Request finished in 235.5623ms 200 application/json;charset=utf-8 (791a596a)
+2018-11-01T09:29:48.8741432+00:00 0HLHVRI22TTCR:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/Comment/3647b9b9-ab62-4669-a139-903cd850686b   (ca22a1cb)
+2018-11-01T09:29:49.0202100+00:00 0HLHVRI22TTCR:00000002 [INF] Failed to validate the token. (616bef97)
+Microsoft.IdentityModel.Tokens.SecurityTokenExpiredException: IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'.
+   at Microsoft.IdentityModel.Tokens.Validators.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, SecurityToken securityToken, TokenValidationParameters validationParameters) in C:\agent2\_work\56\s\src\Microsoft.IdentityModel.Tokens\Validators.cs:line 274
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateLifetime(Nullable`1 notBefore, Nullable`1 expires, JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent2\_work\56\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 1178
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateTokenPayload(JwtSecurityToken jwtToken, TokenValidationParameters validationParameters) in C:\agent2\_work\56\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 735
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.ValidateToken(String token, TokenValidationParameters validationParameters, SecurityToken& validatedToken) in C:\agent2\_work\56\s\src\System.IdentityModel.Tokens.Jwt\JwtSecurityTokenHandler.cs:line 719
+   at Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerHandler.HandleAuthenticateAsync()
+2018-11-01T09:29:49.0280530+00:00 0HLHVRI22TTCR:00000002 [INF] "Bearer" was not authenticated. Failure message: "IDX10223: Lifetime validation failed. The token is expired. ValidTo: '[PII is hidden]', Current time: '[PII is hidden]'." (48071232)
+2018-11-01T09:29:49.0812583+00:00 0HLHVRI22TTCR:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Comment\"}". Executing action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" (a44c0341)
+2018-11-01T09:29:49.0933669+00:00 0HLHVRI22TTCR:00000002 [INF] Authorization failed. (b15dd539)
+2018-11-01T09:29:49.0993377+00:00 0HLHVRI22TTCR:00000002 [INF] Authorization failed for the request at filter '"Microsoft.AspNetCore.Mvc.Authorization.AuthorizeFilter"'. (8b6446cb)
+2018-11-01T09:29:49.1083710+00:00 0HLHVRI22TTCR:00000002 [INF] Executing ChallengeResult with authentication schemes ([]). (f3dca807)
+2018-11-01T09:29:49.1162682+00:00 0HLHVRI22TTCR:00000002 [INF] AuthenticationScheme: "Bearer" was challenged. (d45f1f38)
+2018-11-01T09:29:49.1216484+00:00 0HLHVRI22TTCR:00000002 [INF] Executed action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" in 34.5646ms (afa2e885)
+2018-11-01T09:29:49.1268717+00:00 0HLHVRI22TTCR:00000002 [INF] Request finished in 254.4425ms 401  (791a596a)
+2018-11-01T09:30:07.3467165+00:00 0HLHVRI22TTCQ:00000003 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/Comment/3647b9b9-ab62-4669-a139-903cd850686b   (ca22a1cb)
+2018-11-01T09:30:07.3619346+00:00 0HLHVRI22TTCQ:00000003 [INF] Successfully validated the token. (60169667)
+2018-11-01T09:30:07.3658111+00:00 0HLHVRI22TTCQ:00000003 [INF] Route matched with "{action = \"Get\", controller = \"Comment\"}". Executing action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" (a44c0341)
+2018-11-01T09:30:07.3692339+00:00 0HLHVRI22TTCQ:00000003 [INF] Authorization was successful. (0d575a54)
+2018-11-01T09:30:07.3959674+00:00 0HLHVRI22TTCQ:00000003 [INF] Executing action method "Comments.Api.Controllers.CommentController.Get (Comments.Api)" with arguments (["3647b9b9-ab62-4669-a139-903cd850686b"]) - Validation state: Valid (4e3479ed)
+2018-11-01T09:30:07.4039913+00:00 0HLHVRI22TTCQ:00000003 [INF] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-11-01T09:30:07.5158301+00:00 0HLHVRI22TTCQ:00000003 [ERR] Failed executing DbCommand ("10"ms) [Parameters=["@__commentGuid_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[Id], [x].[Body], [x].[CompanyGuid], [x].[CreationTime], [x].[CreationUserGuid], [x].[Deleted], [x].[Guid], [x].[LastUpdateTime], [x].[LastUpdateUserGuid], [x].[TicketGuid], [x].[UserGuid]
+FROM [Comments] AS [x]
+WHERE ([x].[Guid] = @__commentGuid_0) AND ([x].[Deleted] = 0)" (627a98df)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreationUserGuid'.
+Invalid column name 'LastUpdateUserGuid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+ClientConnectionId:42543eaa-ab7d-4688-a4cf-f0149eac5720
+Error Number:207,State:1,Class:16
+2018-11-01T09:30:07.5543205+00:00 0HLHVRI22TTCQ:00000003 [ERR] An exception occurred in the database while iterating the results of a query for context type '"Comments.Data.EntityFramework.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreationUserGuid'.
+Invalid column name 'LastUpdateUserGuid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:42543eaa-ab7d-4688-a4cf-f0149eac5720
+Error Number:207,State:1,Class:16" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreationUserGuid'.
+Invalid column name 'LastUpdateUserGuid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+ClientConnectionId:42543eaa-ab7d-4688-a4cf-f0149eac5720
+Error Number:207,State:1,Class:16
+2018-11-01T09:30:07.5827211+00:00 0HLHVRI22TTCQ:00000003 [ERR] An exception occurred in the database while iterating the results of a query for context type '"Comments.Data.EntityFramework.ApplicationDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreationUserGuid'.
+Invalid column name 'LastUpdateUserGuid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:42543eaa-ab7d-4688-a4cf-f0149eac5720
+Error Number:207,State:1,Class:16" (64e2593c)
+System.Data.SqlClient.SqlException (0x80131904): Invalid column name 'CreationUserGuid'.
+Invalid column name 'LastUpdateUserGuid'.
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__122_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteAsync(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.BufferlessMoveNext(DbContext _, Boolean buffer, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncQueryingEnumerable`1.AsyncEnumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.FirstOrDefault_[TSource](IAsyncEnumerable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.TaskResultAsyncEnumerable`1.Enumerator.MoveNext(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.SelectEnumerableAsyncIterator`2.MoveNextCore(CancellationToken cancellationToken)
+   at System.Linq.AsyncEnumerable.AsyncIterator`1.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.AsyncLinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext(CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteSingletonAsyncQuery[TResult](QueryContext queryContext, Func`2 compiledQuery, IDiagnosticsLogger`1 logger, Type contextType)
+ClientConnectionId:42543eaa-ab7d-4688-a4cf-f0149eac5720
+Error Number:207,State:1,Class:16
+2018-11-01T09:30:07.6458998+00:00 0HLHVRI22TTCQ:00000003 [INF] Executing JsonResult, writing value of type '"System.Data.SqlClient.SqlException"'. (2f513669)
+2018-11-01T09:30:07.6573436+00:00 0HLHVRI22TTCQ:00000003 [INF] Executed action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" in 288.6119ms (afa2e885)
+2018-11-01T09:30:07.6665994+00:00 0HLHVRI22TTCQ:00000003 [INF] Request finished in 318.57ms 500 application/json; charset=utf-8 (791a596a)
+2018-11-01T09:31:58.7267914+00:00 0HLHVRJFGAGF1:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5001/  0 (ca22a1cb)
+2018-11-01T09:31:58.7267914+00:00 0HLHVRJFGAGF2:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html   (ca22a1cb)
+2018-11-01T09:31:58.7704759+00:00 0HLHVRJFGAGF2:00000001 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2018-11-01T09:31:58.7717359+00:00 0HLHVRJFGAGF1:00000001 [INF] Request finished in 25.6807ms 200  (791a596a)
+2018-11-01T09:31:58.7918121+00:00 0HLHVRJFGAGF2:00000001 [INF] Request finished in 69.1557ms 200 text/html (791a596a)
+2018-11-01T09:31:59.0567218+00:00 0HLHVRJFGAGF1:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json   (ca22a1cb)
+2018-11-01T09:31:59.2505045+00:00 0HLHVRJFGAGF1:00000002 [INF] Request finished in 192.0183ms 200 application/json;charset=utf-8 (791a596a)
+2018-11-01T09:34:18.1390569+00:00 0HLHVRKP1TDPT:00000001 [INF] Request starting HTTP/1.1 DEBUG http://localhost:5001/  0 (ca22a1cb)
+2018-11-01T09:34:18.1390569+00:00 0HLHVRKP1TDPS:00000001 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html   (ca22a1cb)
+2018-11-01T09:34:18.1580418+00:00 0HLHVRKP1TDPS:00000001 [WRN] Failed to determine the https port for redirect. (ca76cc21)
+2018-11-01T09:34:18.1643718+00:00 0HLHVRKP1TDPT:00000001 [INF] Request finished in 27.6586ms 200  (791a596a)
+2018-11-01T09:34:18.1801319+00:00 0HLHVRKP1TDPS:00000001 [INF] Request finished in 42.9046ms 200 text/html (791a596a)
+2018-11-01T09:34:18.4468998+00:00 0HLHVRKP1TDPT:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json   (ca22a1cb)
+2018-11-01T09:34:18.6461388+00:00 0HLHVRKP1TDPT:00000002 [INF] Request finished in 199.6712ms 200 application/json;charset=utf-8 (791a596a)
+2018-11-01T09:34:48.1711093+00:00 0HLHVRKP1TDPS:00000002 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/Comment/3647b9b9-ab62-4669-a139-903cd850686b   (ca22a1cb)
+2018-11-01T09:34:48.2901470+00:00 0HLHVRKP1TDPS:00000002 [INF] Successfully validated the token. (60169667)
+2018-11-01T09:34:48.3467106+00:00 0HLHVRKP1TDPS:00000002 [INF] Route matched with "{action = \"Get\", controller = \"Comment\"}". Executing action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" (a44c0341)
+2018-11-01T09:34:48.3622057+00:00 0HLHVRKP1TDPS:00000002 [INF] Authorization was successful. (0d575a54)
+2018-11-01T09:34:48.3940868+00:00 0HLHVRKP1TDPS:00000002 [INF] Executing action method "Comments.Api.Controllers.CommentController.Get (Comments.Api)" with arguments (["3647b9b9-ab62-4669-a139-903cd850686b"]) - Validation state: Valid (4e3479ed)
+2018-11-01T09:34:48.4027849+00:00 0HLHVRKP1TDPS:00000002 [INF] Entity Framework Core "2.1.4-rtm-31024" initialized '"ApplicationDbContext"' using provider '"Microsoft.EntityFrameworkCore.SqlServer"' with options: "None" (9958f5bb)
+2018-11-01T09:34:48.5065341+00:00 0HLHVRKP1TDPS:00000002 [INF] Executed DbCommand ("9"ms) [Parameters=["@__commentGuid_0='?' (DbType = Guid)"], CommandType='Text', CommandTimeout='30']"
+""SELECT TOP(1) [x].[CommentId], [x].[Body], [x].[CompanyGuid], [x].[CreationTime], [x].[CreationUserGuid], [x].[Deleted], [x].[Guid], [x].[LastUpdateTime], [x].[LastUpdateUserGuid], [x].[TicketGuid], [x].[UserGuid]
+FROM [Comments] AS [x]
+WHERE ([x].[Guid] = @__commentGuid_0) AND ([x].[Deleted] = 0)" (0723d8ff)
+2018-11-01T09:34:48.5369910+00:00 0HLHVRKP1TDPS:00000002 [INF] Executed action method "Comments.Api.Controllers.CommentController.Get (Comments.Api)", returned result "Microsoft.AspNetCore.Mvc.NotFoundResult" in 136.6555ms. (50a9e262)
+2018-11-01T09:34:48.5503029+00:00 0HLHVRKP1TDPS:00000002 [INF] Executing HttpStatusCodeResult, setting HTTP status code 404 (e28ccfae)
+2018-11-01T09:34:48.5581805+00:00 0HLHVRKP1TDPS:00000002 [INF] Executed action "Comments.Api.Controllers.CommentController.Get (Comments.Api)" in 204.6304ms (afa2e885)
+2018-11-01T09:34:48.5693178+00:00 0HLHVRKP1TDPS:00000002 [INF] Request finished in 399.9401ms 404  (791a596a)

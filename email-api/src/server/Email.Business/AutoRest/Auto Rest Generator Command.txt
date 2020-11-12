@@ -1,0 +1,1 @@
+﻿autorest --input-file=http://localhost:5000/swagger/v1/swagger.json --output-folder=C:\Development\BacklogRefiner\email-api\src\server\Email.Business\AutoRest --csharp --namespace='Email.Business.AutoRrest' --add-credentials
